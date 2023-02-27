@@ -98,7 +98,6 @@
   //echo '<img src="' . $img . '" height="200" width="200" alt="This is what you Uploaded!!">';
 
   ?>
-
   <div class="profile">
     <div class="container">
       <div class="contents">

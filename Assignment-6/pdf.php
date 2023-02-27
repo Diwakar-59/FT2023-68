@@ -1,6 +1,7 @@
 <?php
 session_start();
-require('fpdf185/fpdf.php');
+//require('fpdf185/fpdf.php');
+require '../vendor/autoload.php';
 
 class PDF extends FPDF
 {

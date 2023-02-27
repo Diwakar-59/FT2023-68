@@ -31,10 +31,6 @@
       else if (!empty($_SESSION['password'])) {
         header('location:Assignment-4/index.php');
       }
-      /*
-      else {
-        header(('location:login.php'));
-      } */
     }
   ?>
 

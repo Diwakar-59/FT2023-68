@@ -88,8 +88,6 @@
 
   $imag = $_FILES["fileToUpload"]["name"];
   $img = "uploads/" . $imag;
-  //echo '<img src="' . $img . '" height="200" width="200" alt="This is what you Uploaded!!">';
-
   ?>
 
   <div class="profile">
@@ -100,13 +98,7 @@
         echo "<h2>Hello! $full_name </h2>";
       }
       ?>
-
-
-
     </div>
   </div>
-
-
 </body>
-
 </html>

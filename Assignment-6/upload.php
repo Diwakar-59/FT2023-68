@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php require '../php_validate.php';?>
+<?php require '../php_validate.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -153,5 +153,4 @@
     </div>
   </div>
 </body>
-
 </html>

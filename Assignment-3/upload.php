@@ -25,9 +25,6 @@
     $php_check = new validate();
     $php_check->validate_First_Name($_POST['fname']);
     $php_check->validate_Last_Name($_POST['lname']);
-    //$php_check->validate_Email($_POST['email']);
-    //$php_check->validate_Phone($_POST['phone']);
-    //$email_api = $php_check->validateEmail($_POST['email']);
     $fname_error = $php_check->fname_error;
     $lname_error = $php_check->lname_error;
     $email_error = $php_check->email_error;
@@ -94,7 +91,6 @@
 
   $imag = $_FILES["fileToUpload"]["name"];
   $img = "uploads/" . $imag;
-  //echo '<img src="' . $img . '" height="200" width="200" alt="This is what you Uploaded!!">';
 
   ?>
 
@@ -104,11 +100,8 @@
       if ($uploadOk != 0) {
         echo '<img class="image" src="' . $img . '" height="200" width="200" alt="This is what you Uploaded!!">';
         echo "<h2>Hello $full_name !!</h2>";
-        //print_r (explode("\n", $marks));
         foreach ($marks_output as $m) {
-          //echo "$m";
           $sub = explode("|", $m);
-          //echo "<h2>$sub</h2>";
           if ($sub[1] >= 0 && $sub[1] <= 100) {
             $sub_info[$sub[0]] = $sub[1];
           } else {
@@ -122,7 +115,7 @@
           echo  "<tr><td>$x</td> <td>$x_value</td></tr>";
         }
         echo "</table>";
-        //print_r ("$marks_output");
+        
       }
 
       ?>

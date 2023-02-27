@@ -19,8 +19,7 @@ class validate
    * This function is for removing the extra spaces, slashes and special characters from the data entered.
    * @return string
    */
-  function test_input($data)
-  {
+  function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
@@ -31,8 +30,7 @@ class validate
    * This function validates the first name entered by the user.
    * @return void
    */
-  function validate_First_Name($text)
-  {
+  function validate_First_Name($text) {
     if (empty($text)) {
       $this->fname_error = "First Name is required";
     } 
@@ -48,8 +46,7 @@ class validate
    * This function validates the last name entered by the user.
    * @return void
    */
-  function validate_Last_Name($text)
-  {
+  function validate_Last_Name($text) {
     if (empty($text)) {
       $this->lname_error = "Last name is required";
     } 
@@ -65,8 +62,7 @@ class validate
    * This function validates the phone number entered by the user.
    * @return void
    */
-  function validate_Phone($text)
-  {
+  function validate_Phone($text) {
     if (empty($text)) {
       $this->phone_error = "Phone number is required";
     } 
@@ -82,8 +78,7 @@ class validate
    * This function validates the email entered by the user.
    * @return void
    */
-  function validate_Email($text)
-  {
+  function validate_Email($text) {
     if (empty($text)) {
       $this->email_error = "Email is required";
     } else {
@@ -99,11 +94,8 @@ class validate
    * @return void
    */
   // 
-  function validateEmail()
-  {
-    //echo 'Aman';
+  function validateEmail() {
     $email = $_POST['email'];
-    //echo $email;
     $curl = curl_init();
     curl_setopt_array($curl, array(
       CURLOPT_URL => "https://api.apilayer.com/email_verification/check?email=$email",
@@ -122,11 +114,11 @@ class validate
     $response = curl_exec($curl);
     curl_close($curl);
     $obj = json_decode($response);
-    if ($obj->format_valid == true && $obj->smtp_check == true) {
-      return true;
+    if ($obj->format_valid == TRUE && $obj->smtp_check == TRUE) {
+      return TRUE;
     } 
     else {
-      return false;
+      return FALSE;
     }
   }
 }
